@@ -25,7 +25,7 @@ function Firstpage() {
   return (
     <div>
       <Navbar/>
-      <div id='home'  className="firstpage">
+      <div id='home' className="firstpage">
         <div ref={introductionRef} className="introduction-container">
             <h1 className='name-h1'>Hi There! 👋<br />
                I'M <span>SHREYANSH SHARMA</span></h1>
