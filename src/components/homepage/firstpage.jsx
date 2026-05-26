@@ -39,7 +39,7 @@ function Firstpage() {
                 words={["Frontend Developer !"," JavaScript Developer !","Creative Coder !","UI Engineer !"]}
                 />
                 </span></h3>
-               <p className='about-p'>A passionate Frontend Developer from Delhi, India. I love building responsive, beautiful web experiences with React.js and modern web technologies.</p>
+               <p className='about-p'>Frontend Developer focused on building responsive and interactive web applications using React.js and JavaScript.</p>
                <div className="buttons">
                 <a href="#contact"  className='resume-btn' >Get In Touch</a>
                 <a href={Shreyanshsharma_}  className='resume-btn'  target='_blank'>Download CV</a>

@@ -1,5 +1,6 @@
 import React from 'react'
 import './secondpage.css'
+import profile_pic from '../../assets/profile_pic.png'
 import { useEffect, useRef } from 'react'
 
 function Secondpage() {
@@ -31,7 +32,7 @@ const aboutRef = useRef(null);
         <h1 ref={aboutRef}>About <span>Me</span></h1>
         <div ref={leftRef} className="aboutme-container">
             <div className="img-cont">
-            <div className="mine-image">🙋‍♂️</div>
+            <img src={profile_pic} className="mine-image"></img>
             </div>
             <div ref={rightRef} className="information-container">
                 <p>Hello! I'm <span>Shreyansh Sharma</span>, a passionate Frontend Developer based in <span>Delhi, India</span>.</p>
