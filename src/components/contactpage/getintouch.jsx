@@ -30,17 +30,17 @@ function Contact() {
             <div className="contact-box">
                 <h1 className="contact-box-h1">📧</h1>
                 <p className="contact-box-p">Email</p>
-                <p className="contact-box-contact-link">shreyanshsharma678@gmail.com</p>
+                <a href='https://mail.google.com/mail/u/0/?fs=1&to=shreyanshsharma678@gmail.com&tf=cm' target='_blank' className="contact-box-contact-link">shreyanshsharma678@gmail.com</a>
             </div>
             <div className="contact-box">
                 <h1 className="contact-box-h1">💼</h1>
                 <p className="contact-box-p">LinkedIn</p>
-                <p className="contact-box-contact-link">linkedin.com/in/shreyansh678</p>
+                <a href='http://www.linkedin.com/in/shreyansh678' target='_blank' className="contact-box-contact-link">linkedin.com/in/shreyansh678</a>
             </div>
             <div className="contact-box last-contact-box">
                 <h1 className="contact-box-h1">🐙</h1>
                 <p className="contact-box-p">GitHub</p>
-                <a href="https://github.com/shreyansh6678" className="contact-box-contact-link">github.com/shreyansh6678</a>
+                <a href="https://github.com/shreyansh6678" target='_blank' className="contact-box-contact-link">github.com/shreyansh6678</a>
             </div>
         </div>
         <a ref={contactbuttonRef} href="http://www.linkedin.com/in/shreyansh678" target='_blank' className="sayhello">Say Hello👋🏻</a>

@@ -40,7 +40,7 @@ const aboutRef = useRef(null);
                 <div className="info">
                     <div className="boxes">📍<b>Location:</b> Delhi, India</div>
                     <div className="boxes ">🎓 <b>Degree:</b> BCA (2022–25)</div>
-                    <div className="boxes info-box">📧 <b>Email:</b> shreyanshsharma678@gmail.com</div>
+                    <div className="boxes info-box">📧 <b className='info-b'>Email:</b> shreyanshsharma678@gmail.com</div>
                     <div className="boxes">💼 <b>Status:</b> Available Now</div>
                 </div>
             </div>

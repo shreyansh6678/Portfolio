@@ -23,7 +23,7 @@
     background-color: var(--dark2);
 }
 .project-container h1{
-    width: 335px;
+    width: 375px;
     font-size: 38px;
     position: relative;
     padding: 10px;
@@ -222,6 +222,14 @@ transform: translateX(-200px);
 /* .project-container{
         height: 350vh;
     } */
+     .project-container h1{
+        font-size: 24px;
+        width: 242px;
+     }
+     .project-container p{
+        font-size: 20px;
+        width: 242px;
+     }
       .projects-grid{
     margin-top: 50px;
     display: grid;

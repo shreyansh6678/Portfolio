@@ -111,47 +111,6 @@
 .info-box{
     font-size: 10px;
 }
-@media (min-width:760px) and (max-width:1000px) {
-    .secondpage{
-        padding:50px 10px 60px 10px;
-    } 
-    .secondpage h1{
-        margin-top: 10px;
-        margin-bottom: 0;
-    }
-    .aboutme-container{
-        width: 760px;
-        margin-top: 10px;
-        box-sizing: border-box;  
-        padding-bottom: 20px;     
-        /* animation: animation1 2s; */
-    }
-    .img-cont{
-        height: 400px;
-        width: 250px;
-        display: flex;
-        justify-content: start;
-        align-items: start;
-        padding-top: 50px;
-        margin-left: 40px;
-        
-    }
-    .mine-image{
-        height: 200px;
-        width: 200px;
-        font-size: 100px;
-    }
-    .information-container{
-        height: 400px;
-        width: 500px; 
-        justify-content: start;
-    }
-    .information-container p{
-        width: 400px;
-        font-size: 12px;
-        line-height:1.4 ;
-    }
-}
 
 @media (min-width:760px) and (max-width:1000px) {
     .secondpage{
@@ -196,7 +155,7 @@
 }
 @media (min-width:500px) and (max-width:760px) {
     .secondpage{
-        padding:50px 10px 60px 10px;
+        padding:50px 10px 0px 10px;
     } 
     .secondpage h1{
         margin-top: 10px;
@@ -206,7 +165,7 @@
         width: 500px;
         margin-top: 10px;
         box-sizing: border-box;  
-        padding-bottom: 20px;     
+        padding-bottom: 0px;     
         /* animation: animation1 2s; */
     }
     .img-cont{
@@ -249,7 +208,7 @@
         font-size: 7px;
     }
 }
-@media (max-width:500px) {
+@media (min-width:300px) and (max-width:500px) {
     .secondpage{
         padding:10px 10px 10px 10px;
     } 
@@ -259,6 +218,63 @@
     }
     .aboutme-container{
         width: 400px;
+        /* margin-top: 10px; */
+        box-sizing: border-box;  
+        padding-bottom: 0px;     
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .img-cont{
+        display: none;
+        
+    }
+    .mine-image{
+        /* height: 50px;
+        width: 50px;
+        font-size: 30px; */
+        display: none;
+    }
+    .information-container{
+        height: 400px;
+        width: 520px; 
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-left: 10px;
+    }
+    .information-container p{
+        width: 250px;
+        font-size: 12px;
+        line-height:1.4 ;
+    }
+    .info{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 250px;
+        margin-top: 10px;
+    }
+    .boxes{
+        font-size: 7px;
+    }
+    .info-box{
+        width: 136px;
+        font-size: 6px;
+        /* text-align: center; */
+    }
+    .info-b{
+        font-size: 8px;
+    }
+}
+@media (max-width:300px){
+    .secondpage{
+        padding:10px 10px 10px 10px;
+    } 
+    .secondpage h1{
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    .aboutme-container{
+        width: 300px;
         /* margin-top: 10px; */
         box-sizing: border-box;  
         padding-bottom: 20px;     
@@ -292,22 +308,25 @@
         margin-left: 10px;
     }
     .information-container p{
-        width: 250px;
+        width: 200px;
         font-size: 12px;
         line-height:1.4 ;
     }
     .info{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr ;
+        justify-content: center;
+        align-items: center;
         width: 200px;
-        row-gap: 10px;
+        row-gap: 14px;
         column-gap: 20px;
         margin-top: 10px;
     }
     .boxes{
-        font-size: 7px;
+        font-size: 8px;
     }
-    .info-box{
-        font-size: 5px;
+    .info-b{
+        font-size: 8px;
+        /* text-align: center; */
     }
 }

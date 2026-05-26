@@ -25,7 +25,7 @@ function Resume() {
   return (
       <div id="resume">
       <div  className="resumepage">
-        <h1 ref={headingRef} className='resume-h1'>My <span>Resume</span></h1>
+        <h1 ref={headingRef} className='resume-h1'>My <span>Educational Details</span></h1>
         <div ref={resumegridRef} className="resume-grid">
           <div className="education-cont">
             <h1 className="education-h1"><i className="ti ti-school"></i>&nbsp;   Education</h1>

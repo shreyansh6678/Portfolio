@@ -46,7 +46,7 @@ function ProjectsPage() {
   return (
     <div>
       <div id="project" className="project-container">
-        <h1 ref={projectRef}>My Recent <span>Works</span></h1>
+        <h1 ref={projectRef}>My Recent <span>Projects</span></h1>
         <p>Here are a few projects I've worked on recently.</p>
         <div ref={cardRef} className="projects-grid">
            {projects.map((project,i)=>(

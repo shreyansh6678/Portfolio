@@ -21,7 +21,7 @@
     background-color: var(--dark);
 }
 .resume-h1{
-    width: 230px;
+    width: 440px;
     font-size: 38px;
     position: relative;
     padding: 10px;
@@ -139,7 +139,7 @@
         left:456px;
     }
 }
-@media (min-width:400px) and (max-width:910px) {
+@media (min-width:440px) and (max-width:910px) {
     .resume-grid{
     display: grid;
     grid-template-columns: 1fr;
@@ -151,12 +151,23 @@
     }
 }
 @media (min-width:200px) and (max-width:480px){
+    .resume-h1{
+        font-size: 15px;
+        width: 200px;
+    }
     .resume-grid{
         display: grid;
     grid-template-columns: 1fr;
     gap: 50px;
     margin-top: 50px;
-    margin-left: 200px;
+    margin-left: 20px;
+    }
+    .education-cont{
+        width: 300px;
+    }
+    .certifications-cont{
+        width: 300px;
+        margin-left: 0px;
     }
     .certifications-cont .dot-over-line2{
         left:5px;
