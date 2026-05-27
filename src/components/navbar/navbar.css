@@ -41,6 +41,20 @@ nav{
     text-decoration:none;
     color:#8baac2;
     font-size:16px;
+    position: relative;
+}
+.nav-menu a::after{
+   content: "";
+   bottom: -3px;
+   left: 0;
+   height: 2px;
+   width: 0;
+   position: absolute;
+   background: var(--blue);
+   transition: width 0.3s ease-in-out;
+}
+.nav-menu a:hover::after{
+    width: 100%;
 }
 .hov:hover {
     color:var(--blue);
