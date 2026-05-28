@@ -1,67 +1,157 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './firstpage.css'
-import {Typewriter} from "react-simple-typewriter" 
-import { useEffect,useRef } from 'react'
+import { Typewriter } from "react-simple-typewriter"
 import Navbar from '../navbar/navbar'
 import profile_pic from '../../assets/profile_pic.png'
 import Shreyanshsharma_ from '../../assets/Shreyanshsharma_.pdf'
 
 function Firstpage() {
- const introductionRef=useRef(null)
- const imageRef=useRef(null)
- 
- useEffect(()=>{
-  const observer = new IntersectionObserver((entries)=>{
-   entries.forEach((entry)=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("reveal")
+
+  const introductionRef = useRef(null)
+  const imageRef = useRef(null)
+  const canvasRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal")
+        }
+      })
+    }, { threshold: 0.3 })
+
+    observer.observe(introductionRef.current)
+    observer.observe(imageRef.current)
+    const canvas = canvasRef.current
+    const ctx = canvas.getContext("2d")
+
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+    canvas.height = document.querySelector(".firstpage").offsetHeight
+
+    const particles = []
+
+    for (let i = 0; i < 90; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        r: Math.random() * 2 + 1,
+      })
     }
-   })
-  },{threshold:0.3})
-  observer.observe(introductionRef.current)
-  observer.observe(imageRef.current)
- },[])
+
+    function animate() {
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+      particles.forEach((a, i) => {
+
+        a.x += a.vx
+        a.y += a.vy
+
+        if (a.x < 0 || a.x > canvas.width) a.vx *= -1
+        if (a.y < 0 || a.y > canvas.height) a.vy *= -1
+
+        ctx.beginPath()
+        ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2)
+        ctx.fillStyle = "rgba(86, 204, 242, 0.6)"
+        ctx.fill()
+
+        particles.slice(i + 1).forEach((b) => {
+
+          const distance = Math.hypot(a.x - b.x, a.y - b.y)
+
+          if (distance < 130) {
+
+            ctx.beginPath()
+            ctx.moveTo(a.x, a.y)
+            ctx.lineTo(b.x, b.y)
+
+            ctx.strokeStyle = `rgba(47,128,237, ${0.2 * (1 - distance / 130)})`
+            ctx.stroke()
+          }
+        })
+      })
+
+      requestAnimationFrame(animate)
+    }
+
+    animate()
+    return () => observer.disconnect()
+
+  }, [])
 
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div id='home' className="firstpage">
+      <canvas ref={canvasRef} className="particle-canvas"></canvas>
+
         <div ref={introductionRef} className="introduction-container">
-            <h1 className='name-h1'>Hi There! 👋<br />
-               I'M <span>SHREYANSH SHARMA</span></h1>
-               <h3 className='proffesion' >I AM A <span id='typewriter'>
-                <Typewriter 
+
+          <h1 className='name-h1'>
+            Hi There! 👋 <br />
+            I'M <span>SHREYANSH SHARMA</span>
+          </h1>
+
+          <h3 className='proffesion'>
+            I AM A
+            <span id='typewriter'>
+              <Typewriter
                 loop
                 cursor
                 typeSpeed={70}
                 deleteSpeed={50}
                 delaySpeed={1000}
-                words={["Frontend Developer !"," JavaScript Developer !","Creative Coder !","UI Engineer !"]}
-                />
-                </span></h3>
-               <p className='about-p'>Frontend Developer focused on building responsive and interactive web applications using React.js and JavaScript.</p>
-               <div className="buttons">
-                <a href="#contact"  className='resume-btn' >Get In Touch</a>
-                <a href={Shreyanshsharma_}  className='resume-btn'  target='_blank'>Download CV</a>
-               </div>
-               <div className="link-buttons">
-                <a className='email-icon' target='_blank' href="https://www.github.com/shreyansh6678"><i className="ti ti-brand-github"></i></a>
-                <a className='email-icon' target='_blank' href="https://www.linkedin.com/in/shreyansh678"><i className="ti ti-brand-linkedin"></i></a>
-                <a className='email-icon' target='_blank' href="https://mail.google.com/mail/?view=cm&fs=1&to=shreyanshsharma678@gmail.com"><i fill="#8baac2" className="ti ti-mail"></i></a>
-               </div>
+                words={[
+                  "Frontend Developer !",
+                  "JavaScript Developer !",
+                  "Creative Coder !",
+                  "UI Engineer !"
+                ]}
+              />
+            </span>
+          </h3>
+
+          <p className='about-p'>
+            Frontend Developer focused on building responsive and interactive web applications using React.js and JavaScript.
+          </p>
+
+          <div className="buttons">
+            <a href="#contact" className='resume-btn'>Get In Touch</a>
+
+            <a
+              href={Shreyanshsharma_}
+              className='resume-btn'
+              target='_blank'
+            >
+              Download CV
+            </a>
+          </div>
+
         </div>
+
         <div ref={imageRef} className="my-image-container">
-            <div className="cont-wrap">
-              <div className="cont-ring">
-                <div className="cont-dot"></div>
-                <div className="cont-dot"></div>
-                <div className="cont-dot"></div>
-              </div>
-              <div className="cont-ring2"></div>
-              <img src={profile_pic} alt="" className="my-image"></img>
+
+          <div className="cont-wrap">
+
+            <div className="cont-ring">
+              <div className="cont-dot"></div>
+              <div className="cont-dot"></div>
+              <div className="cont-dot"></div>
             </div>
+
+            <div className="cont-ring2"></div>
+
+            <img src={profile_pic} alt="" className="my-image" />
+
+          </div>
+
         </div>
+
       </div>
+
     </div>
   )
 }

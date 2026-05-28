@@ -21,7 +21,7 @@
     padding: 100px 0;
     overflow: hidden;
     background-color: var(--dark2);
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 .secondpage h1{
     height: 80px;
