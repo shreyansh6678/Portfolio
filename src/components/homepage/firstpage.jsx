@@ -96,8 +96,7 @@ function Firstpage() {
           </h1>
 
           <h3 className='proffesion'>
-            I AM A
-            <span id='typewriter'>
+            I AM A <span id='typewriter'>
               <Typewriter
                 loop
                 cursor
