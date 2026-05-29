@@ -8,7 +8,7 @@ function ProjectsPage() {
           title:"Healthcare Website",
           desc:"A responsive healthcare web app with modern UI design, reusable React components, and smooth mobile-first experience.",
           tags: ["React.js", "CSS3", "JavaScript"],
-          demo: "https://healthcare-by-ss.netlify.app",
+          demo: "https://health-care-by-ss.vercel.app",
           code: "https://github.com/shreyansh6678/HealthCare"
       },
       {
@@ -16,7 +16,7 @@ function ProjectsPage() {
       title: "Task Manager App",
       desc: "A clean to-do app with real-time DOM manipulation, add/delete tasks, and a minimal user-friendly interface.",
       tags: ["HTML5", "CSS3", "JavaScript"],
-      demo: "https://to-dolist-ss.netlify.app/",
+      demo: "https://to-do-list-bs-ss.vercel.app",
       code: "https://github.com/shreyansh6678/To-Do-List"
       },
       {
@@ -24,7 +24,7 @@ function ProjectsPage() {
       title: "Weather App",
       desc: "Built a responsive weather application using weather API that displays real-time weather data for different countries.",
       tags: ["React.js","JavaScript", "CSS3", ],
-      demo: "https://weather-app-by-ss.netlify.app/",
+      demo: "https://weather-app-by-ss.vercel.app",
       code: "https://github.com/shreyansh6678/Weather-app"
       },
   ];
