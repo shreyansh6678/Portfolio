@@ -8,8 +8,8 @@ function ProjectsPage() {
           title:"Healthcare Website",
           desc:"A responsive healthcare web app with modern UI design, reusable React components, and smooth mobile-first experience.",
           tags: ["React.js", "CSS3", "JavaScript"],
-          demo: "https://health-care-bary.netlify.app/",
-          code: "https://github.com/shreyansh6678/healthcare"
+          demo: "https://healthcare-by-ss.netlify.app/",
+          code: "https://github.com/shreyansh6678/HealthCare"
       },
       {
       emoji: "✅",
