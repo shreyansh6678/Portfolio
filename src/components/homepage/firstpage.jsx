@@ -3,7 +3,7 @@ import './firstpage.css'
 import { Typewriter } from "react-simple-typewriter"
 import Navbar from '../navbar/navbar'
 import profile_pic from '../../assets/profile_pic.png'
-import Shreyanshsharma_ from '../../assets/Shreyanshsharma_.pdf'
+import Shreyanshsharm_a from '../../assets/Shreyanshsharm_a.pdf'
 
 function Firstpage() {
 
@@ -121,7 +121,7 @@ function Firstpage() {
             <a href="#contact" className='resume-btn'>Get In Touch</a>
 
             <a
-              href={Shreyanshsharma_}
+              href={Shreyanshsharm_a}
               className='resume-btn'
               target='_blank'
             >
