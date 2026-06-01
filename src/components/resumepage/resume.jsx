@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect,useRef } from 'react'
 import './resume.css'
-import Shreyanshsharm_a from '../../assets/Shreyanshsharm_a.pdf' 
+import Shreyansh_Sharma_FullStack_Developer_Resume from '../../assets/Shreyansh_Sharma_FullStack_Developer_Resume.pdf'
 
 function Resume() {
   const headingRef=useRef(null);
@@ -74,7 +74,7 @@ function Resume() {
             </div>
           </div>
         </div>
-        <a ref={buttonRef} href={Shreyanshsharm_a} target='_blank' className="resume-btn2">⬇ Download CV
+        <a ref={buttonRef} href={Shreyansh_Sharma_FullStack_Developer_Resume} target='_blank' className="resume-btn2">⬇ Download CV
     </a>
     </div>
     </div>
