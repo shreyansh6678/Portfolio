@@ -1,11 +1,11 @@
 :root{
-  --blue:#56CCF2;
-  --blue2:#2F80ED;
-  --dark:#050d18;
-  --dark2:#080f1f;
-  --card:#0d1a2e;
-  --text:#e8f4fd;
-  --muted:#8baac2;
+  --blue: #B27CF2;
+--blue2: #8B2FED;
+--dark: #0a0518;
+--dark2: #0f081f;
+--card: #180d2e;
+--text: #f0e8fd;
+--muted: #ab8bc2;
 }
 html{
     scroll-behavior: smooth;
@@ -27,10 +27,9 @@ html{
     z-index: 2;
 } 
 #homes,
-#about,
 #skill,
 #project,
 #resume,
 #contact{
-    scroll-margin-top: 30px;
+    scroll-margin-top: 10px;
 }

@@ -1,38 +1,68 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./navbar.css";
 
+const LINKS = [
+    { id: "#home", label: "Home" },
+    { id: "#about", label: "About" },
+    { id: "#skill", label: "Skills" },
+    { id: "#project", label: "Projects" },
+    { id: "#resume", label: "Education" },
+    { id: "#contact", label: "Contact" },
+];
+
 function Navbar() {
-    const [showMenu, setShowMenu] = useState(false);
-    const handleNavClick = (e, sectionId) => {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [activeLink, setActiveLink] = useState("#home");
+
+    useEffect(() => {
+        const handleScroll = () => setIsScrolled(window.scrollY > 12);
+        handleScroll();
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const handleLinkClick = (e, sectionId) => {
         e.preventDefault();
         const element = document.querySelector(sectionId);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            element.scrollIntoView({ behavior: "smooth" });
         }
-        setShowMenu(false);
+        setActiveLink(sectionId);
+        setMenuOpen(false);
     };
 
     return (
-        <nav>
-            <div className="brand">
-                Shreyansh<span>.</span>
+        <nav className={`site-navbar ${isScrolled ? "is-scrolled" : ""}`}>
+            <div className="navbar-logo">
+                Shreyansh<span className="logo-dot">.</span>
             </div>
 
-            <ul className={`nav-menu ${showMenu ? "active" : ""}`}>
-                <li><a className="hov" href="#home" onClick={(e) => handleNavClick(e, '#home')}>Home</a></li>
-                <li><a className="hov" href="#about" onClick={(e) => handleNavClick(e, '#about')}>About</a></li>
-                <li><a className="hov" href="#skill" onClick={(e) => handleNavClick(e, '#skill')}>Skills</a></li>
-                <li><a className="hov" href="#project" onClick={(e) => handleNavClick(e, '#project')}>Projects</a></li>
-                <li><a className="hov" href="#resume" onClick={(e) => handleNavClick(e, '#resume')}>Education</a></li>
-                <li><a className="hov" href="#contact" onClick={(e) => handleNavClick(e, '#contact')}>Contact</a></li>
+            <ul className={`navbar-links ${menuOpen ? "is-open" : ""}`}>
+                {LINKS.map(({ id, label }) => (
+                    <li key={id} className="navbar-link-item">
+                        <a
+                            className={`navbar-link ${activeLink === id ? "is-active" : ""}`}
+                            href={id}
+                            onClick={(e) => handleLinkClick(e, id)}
+                        >
+                            {label}
+                        </a>
+                    </li>
+                ))}
             </ul>
 
-            <div
-                className="hamburger"
-                onClick={() => setShowMenu(!showMenu)}
+            <button
+                type="button"
+                className={`menu-toggle ${menuOpen ? "is-open" : ""}`}
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="Toggle menu"
+                aria-expanded={menuOpen}
             >
-                ☰
-            </div>
+                <span className="menu-toggle-bar" />
+                <span className="menu-toggle-bar" />
+                <span className="menu-toggle-bar" />
+            </button>
         </nav>
     );
 }
