@@ -6,17 +6,17 @@ const EDUCATION = [
     {
         date: "2022 - 2025",
         degree: "Bachelor of Computer Applications",
-        location: "Delhi, India",
+        location: "LLDIMS, GGSIPU New Delhi, India",
     },
     {
         date: "2021 - 2022",
         degree: "Senior Secondary (XII)",
-        location: "DAV Public School, Delhi",
+        location: "DAV Public School, New Delhi",
     },
     {
         date: "2019 - 2020",
         degree: "Secondary (X)",
-        location: "DAV Public School, Delhi",
+        location: "DAV Public School, New Delhi",
     },
 ];
 
